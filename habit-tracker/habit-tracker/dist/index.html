@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>✨ Habit Tracker</h1>
+            <p>Build better habits, one day at a time</p>
+        </header>
+
+        <!-- Main Habits Card (Combined) -->
+        <div class="card habits-main-card">
+            <!-- Top Section: Add Habit + Clock -->
+            <div class="habits-top-section">
+                <!-- Left: Add Habit Form -->
+                <div class="add-habit-area">
+                    <h3 class="section-label">➕ Add New Habit</h3>
+                    <form class="add-habit-form" id="addHabitForm">
+                        <input type="text" id="habitInput" placeholder="Enter a new habit..." required>
+                        <button type="submit">Add</button>
+                    </form>
+                    <div class="quick-add">
+                        <span class="quick-add-label">Quick Add:</span>
+                        <div class="quick-add-buttons">
+                            <button class="quick-add-btn" data-habit="Morning Meditation">🧘 Meditation</button>
+                            <button class="quick-add-btn" data-habit="Exercise for 30 minutes">💪 Exercise</button>
+                            <button class="quick-add-btn" data-habit="Read for 30 minutes">📚 Reading</button>
+                            <button class="quick-add-btn" data-habit="Drink 8 glasses of water">💧 Water</button>
+                            <button class="quick-add-btn" data-habit="Journal Writing">✍️ Journal</button>
+                            <button class="quick-add-btn" data-habit="Practice Gratitude">🙏 Gratitude</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Divider -->
+                <div class="vertical-divider"></div>
+
+                <!-- Right: Clock & Quote -->
+                <div class="clock-area">
+                    <div class="clock-time-wrapper">
+                        <!-- Analog Clock -->
+                        <div class="clock">
+                            <div class="clock-face">
+                                <span class="number number-12">12</span>
+                                <span class="number number-3">3</span>
+                                <span class="number number-6">6</span>
+                                <span class="number number-9">9</span>
+                                <div class="hand hour-hand" id="hourHand"></div>
+                                <div class="hand minute-hand" id="minuteHand"></div>
+                                <div class="hand second-hand" id="secondHand"></div>
+                                <div class="center-dot"></div>
+                            </div>
+                        </div>
+
+                        <!-- Digital Time & Date -->
+                        <div class="time-info">
+                            <div class="digital-time" id="digitalTime">00:00:00</div>
+                            <div class="date-display" id="dateDisplay">Monday, January 1, 2024</div>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="quote-box">
+                        <div class="quote-content">
+                            <span class="quote-icon">🙏</span>
+                            <p class="quote-text" id="quoteText">Loading wisdom...</p>
+                            <span class="quote-source" id="quoteSource">— Source</span>
+                        </div>
+                        <div class="quote-sanskrit" id="quoteSanskrit"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horizontal Divider -->
+            <div class="horizontal-divider"></div>
+
+            <!-- Habits List Section -->
+            <div class="habits-list-section">
+                <h3 class="section-label">📋 My Habits</h3>
+                
+                <div class="days-header" id="daysHeader">
+                    <span>Habit</span>
+                </div>
+
+                <div class="habit-list" id="habitList">
+                    <!-- Habits will be rendered here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="card progress-card">
+            <h3 class="card-title">📊 Your Progress</h3>
+            
+            <div class="progress-grid">
+                <!-- Today's Progress -->
+                <div class="progress-item">
+                    <div class="progress-ring-container">
+                        <svg class="progress-ring" width="100" height="100">
+                            <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
+                            <circle class="progress-ring-fill today-fill" id="todayProgressRing" cx="50" cy="50" r="42"></circle>
+                        </svg>
+                        <div class="progress-ring-text">
+                            <span class="progress-percentage" id="todayPercentage">0%</span>
+                            <span class="progress-label">Today</span>
+                        </div>
+                    </div>
+                    <div class="progress-details">
+                        <span id="todayCompleted">0</span> of <span id="todayTotal">0</span> done
+                    </div>
+                </div>
+
+                <!-- Weekly Progress -->
+                <div class="progress-item">
+                    <div class="progress-ring-container">
+                        <svg class="progress-ring" width="100" height="100">
+                            <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
+                            <circle class="progress-ring-fill weekly-fill" id="weeklyProgressRing" cx="50" cy="50" r="42"></circle>
+                        </svg>
+                        <div class="progress-ring-text">
+                            <span class="progress-percentage" id="weeklyPercentage">0%</span>
+                            <span class="progress-label">Week</span>
+                        </div>
+                    </div>
+                    <div class="progress-details">
+                        <span id="weeklyCompleted">0</span> of <span id="weeklyTotal">0</span> done
+                    </div>
+                </div>
+
+                <!-- Streak -->
+                <div class="progress-item">
+                    <div class="progress-ring-container">
+                        <svg class="progress-ring" width="100" height="100">
+                            <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
+                            <circle class="progress-ring-fill streak-fill" id="streakProgressRing" cx="50" cy="50" r="42"></circle>
+                        </svg>
+                        <div class="progress-ring-text">
+                            <span class="progress-percentage" id="streakDays">0</span>
+                            <span class="progress-label">Streak</span>
+                        </div>
+                    </div>
+                    <div class="progress-details">🔥 Best streak</div>
+                </div>
+
+                <!-- Overall Progress Bar -->
+                <div class="overall-progress-container">
+                    <div class="overall-progress-header">
+                        <span>Weekly Overview</span>
+                        <span id="overallPercentageText">0%</span>
+                    </div>
+                    <div class="overall-progress-bar">
+                        <div class="overall-progress-fill" id="overallProgressFill"></div>
+                    </div>
+                    <div class="overall-progress-days">
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                        <span>Sun</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Reflection Section -->
+        <div class="card reflection-card">
+            <div class="reflection-header">
+                <h3 class="card-title">📝 Daily Reflection</h3>
+                <div class="reflection-date-nav">
+                    <button class="date-nav-btn" id="prevDateBtn" title="Previous Day">←</button>
+                    <div class="current-date-display">
+                        <span class="date-label" id="reflectionDateLabel">Today</span>
+                        <span class="date-full" id="reflectionDateFull">January 1, 2024</span>
+                    </div>
+                    <button class="date-nav-btn" id="nextDateBtn" title="Next Day">→</button>
+                </div>
+            </div>
+
+            <div class="reflection-prompts">
+                <span class="prompt-tag">💡 Prompts:</span>
+                <button class="prompt-btn" data-prompt="What am I grateful for today?">Gratitude</button>
+                <button class="prompt-btn" data-prompt="What did I accomplish today?">Accomplishments</button>
+                <button class="prompt-btn" data-prompt="What challenges did I face and how did I handle them?">Challenges</button>
+                <button class="prompt-btn" data-prompt="What will I focus on tomorrow?">Tomorrow</button>
+                <button class="prompt-btn" data-prompt="How am I feeling right now?">Feelings</button>
+                <button class="prompt-btn" data-prompt="What did I learn today?">Learnings</button>
+            </div>
+
+            <div class="reflection-content">
+                <textarea 
+                    class="reflection-textarea" 
+                    id="reflectionTextarea" 
+                    placeholder="Write your thoughts, reflections, and insights for the day...
+
+✨ What went well today?
+🎯 What could be improved?
+💭 Any thoughts or ideas?
+🙏 What are you grateful for?
+
+Take a moment to pause and reflect..."></textarea>
+                
+                <div class="reflection-footer">
+                    <div class="reflection-stats">
+                        <span class="word-count" id="wordCount">0 words</span>
+                        <span class="char-count" id="charCount">0 characters</span>
+                    </div>
+                    <div class="reflection-actions">
+                        <span class="save-status" id="saveStatus">
+                            <span class="status-icon">💾</span>
+                            <span class="status-text">Auto-saved</span>
+                        </span>
+                        <button class="clear-btn" id="clearReflectionBtn">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reflection History -->
+            <div class="reflection-history">
+                <div class="history-header">
+                    <h4>📚 Recent Reflections</h4>
+                    <button class="toggle-history-btn" id="toggleHistoryBtn">Show All</button>
+                </div>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Made with ❤️ for building better habits</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
