@@ -95,77 +95,130 @@
             </div>
         </div>
 
-        <!-- Progress Section -->
-        <div class="card progress-card">
-            <h3 class="card-title">📊 Your Progress</h3>
-            
-            <div class="progress-grid">
-                <!-- Today's Progress -->
-                <div class="progress-item">
-                    <div class="progress-ring-container">
-                        <svg class="progress-ring" width="100" height="100">
-                            <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
-                            <circle class="progress-ring-fill today-fill" id="todayProgressRing" cx="50" cy="50" r="42"></circle>
-                        </svg>
-                        <div class="progress-ring-text">
-                            <span class="progress-percentage" id="todayPercentage">0%</span>
-                            <span class="progress-label">Today</span>
+        <!-- Two Column Layout: To-Do List & Progress -->
+        <div class="two-column-layout">
+            <!-- Daily To-Do List -->
+            <div class="card todo-card">
+                <div class="todo-header">
+                    <h3 class="card-title">✅ Daily To-Do List</h3>
+                    <div class="todo-date-nav">
+                        <button class="date-nav-btn" id="todoPrevDateBtn" title="Previous Day">←</button>
+                        <div class="current-date-display">
+                            <span class="date-label" id="todoDateLabel">Today</span>
+                            <span class="date-full" id="todoDateFull">January 1, 2024</span>
                         </div>
-                    </div>
-                    <div class="progress-details">
-                        <span id="todayCompleted">0</span> of <span id="todayTotal">0</span> done
+                        <button class="date-nav-btn" id="todoNextDateBtn" title="Next Day">→</button>
                     </div>
                 </div>
 
-                <!-- Weekly Progress -->
-                <div class="progress-item">
-                    <div class="progress-ring-container">
-                        <svg class="progress-ring" width="100" height="100">
-                            <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
-                            <circle class="progress-ring-fill weekly-fill" id="weeklyProgressRing" cx="50" cy="50" r="42"></circle>
-                        </svg>
-                        <div class="progress-ring-text">
-                            <span class="progress-percentage" id="weeklyPercentage">0%</span>
-                            <span class="progress-label">Week</span>
-                        </div>
+                <!-- Add Task Form -->
+                <form class="add-task-form" id="addTaskForm">
+                    <input type="text" id="taskInput" placeholder="Add a new task..." required>
+                    <select id="taskPriority" class="priority-select">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button type="submit">Add</button>
+                </form>
+
+                <!-- Task Progress -->
+                <div class="task-progress-bar-container">
+                    <div class="task-progress-info">
+                        <span id="taskProgressText">0 of 0 tasks completed</span>
+                        <span id="taskProgressPercent">0%</span>
                     </div>
-                    <div class="progress-details">
-                        <span id="weeklyCompleted">0</span> of <span id="weeklyTotal">0</span> done
+                    <div class="task-progress-bar">
+                        <div class="task-progress-fill" id="taskProgressFill"></div>
                     </div>
                 </div>
 
-                <!-- Streak -->
-                <div class="progress-item">
-                    <div class="progress-ring-container">
-                        <svg class="progress-ring" width="100" height="100">
-                            <circle class="progress-ring-bg" cx="50" cy="50" r="42"></circle>
-                            <circle class="progress-ring-fill streak-fill" id="streakProgressRing" cx="50" cy="50" r="42"></circle>
-                        </svg>
-                        <div class="progress-ring-text">
-                            <span class="progress-percentage" id="streakDays">0</span>
-                            <span class="progress-label">Streak</span>
-                        </div>
-                    </div>
-                    <div class="progress-details">🔥 Best streak</div>
+                <!-- Task List -->
+                <div class="task-list" id="taskList">
+                    <!-- Tasks will be rendered here -->
                 </div>
 
-                <!-- Overall Progress Bar -->
-                <div class="overall-progress-container">
-                    <div class="overall-progress-header">
-                        <span>Weekly Overview</span>
-                        <span id="overallPercentageText">0%</span>
+                <!-- Task Filters -->
+                <div class="task-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    <button class="clear-completed-btn" id="clearCompletedBtn">Clear Completed</button>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="card progress-card">
+                <h3 class="card-title">📊 Your Progress</h3>
+                
+                <div class="progress-grid-vertical">
+                    <!-- Today's Progress -->
+                    <div class="progress-item">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="90" height="90">
+                                <circle class="progress-ring-bg" cx="45" cy="45" r="38"></circle>
+                                <circle class="progress-ring-fill today-fill" id="todayProgressRing" cx="45" cy="45" r="38"></circle>
+                            </svg>
+                            <div class="progress-ring-text">
+                                <span class="progress-percentage" id="todayPercentage">0%</span>
+                                <span class="progress-label">Today</span>
+                            </div>
+                        </div>
+                        <div class="progress-details">
+                            <span id="todayCompleted">0</span>/<span id="todayTotal">0</span> habits
+                        </div>
                     </div>
-                    <div class="overall-progress-bar">
-                        <div class="overall-progress-fill" id="overallProgressFill"></div>
+
+                    <!-- Weekly Progress -->
+                    <div class="progress-item">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="90" height="90">
+                                <circle class="progress-ring-bg" cx="45" cy="45" r="38"></circle>
+                                <circle class="progress-ring-fill weekly-fill" id="weeklyProgressRing" cx="45" cy="45" r="38"></circle>
+                            </svg>
+                            <div class="progress-ring-text">
+                                <span class="progress-percentage" id="weeklyPercentage">0%</span>
+                                <span class="progress-label">Week</span>
+                            </div>
+                        </div>
+                        <div class="progress-details">
+                            <span id="weeklyCompleted">0</span>/<span id="weeklyTotal">0</span> done
+                        </div>
                     </div>
-                    <div class="overall-progress-days">
-                        <span>Mon</span>
-                        <span>Tue</span>
-                        <span>Wed</span>
-                        <span>Thu</span>
-                        <span>Fri</span>
-                        <span>Sat</span>
-                        <span>Sun</span>
+
+                    <!-- Streak -->
+                    <div class="progress-item">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="90" height="90">
+                                <circle class="progress-ring-bg" cx="45" cy="45" r="38"></circle>
+                                <circle class="progress-ring-fill streak-fill" id="streakProgressRing" cx="45" cy="45" r="38"></circle>
+                            </svg>
+                            <div class="progress-ring-text">
+                                <span class="progress-percentage" id="streakDays">0</span>
+                                <span class="progress-label">Streak</span>
+                            </div>
+                        </div>
+                        <div class="progress-details">🔥 Best streak</div>
+                    </div>
+
+                    <!-- Overall Progress Bar -->
+                    <div class="overall-progress-container">
+                        <div class="overall-progress-header">
+                            <span>Weekly Overview</span>
+                            <span id="overallPercentageText">0%</span>
+                        </div>
+                        <div class="overall-progress-bar">
+                            <div class="overall-progress-fill" id="overallProgressFill"></div>
+                        </div>
+                        <div class="overall-progress-days">
+                            <span>M</span>
+                            <span>T</span>
+                            <span>W</span>
+                            <span>T</span>
+                            <span>F</span>
+                            <span>S</span>
+                            <span>S</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -237,6 +290,66 @@ Take a moment to pause and reflect..."></textarea>
         <footer class="app-footer">
             <p>Made with ❤️ for building better habits</p>
         </footer>
+    </div>
+
+    <!-- Edit Habit Modal -->
+    <div class="modal-overlay" id="editHabitModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>✏️ Edit Habit</h3>
+                <button class="modal-close-btn" id="closeHabitModalBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <label for="editHabitInput">Habit Name</label>
+                <input type="text" id="editHabitInput" class="modal-input" placeholder="Enter habit name...">
+                <div class="modal-habit-info">
+                    <div class="habit-stat">
+                        <span class="stat-label">Created:</span>
+                        <span class="stat-value" id="habitCreatedDate">-</span>
+                    </div>
+                    <div class="habit-stat">
+                        <span class="stat-label">Current Streak:</span>
+                        <span class="stat-value" id="habitCurrentStreak">0 days</span>
+                    </div>
+                    <div class="habit-stat">
+                        <span class="stat-label">Completions:</span>
+                        <span class="stat-value" id="habitTotalCompletions">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancelHabitEditBtn">Cancel</button>
+                <button class="modal-btn save-btn" id="saveHabitEditBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal-overlay" id="editTaskModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>✏️ Edit Task</h3>
+                <button class="modal-close-btn" id="closeTaskModalBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <label for="editTaskInput">Task Name</label>
+                <input type="text" id="editTaskInput" class="modal-input" placeholder="Enter task...">
+                
+                <label for="editTaskPriority" style="margin-top: 15px;">Priority</label>
+                <select id="editTaskPriority" class="modal-select">
+                    <option value="low">🟢 Low Priority</option>
+                    <option value="medium">🟡 Medium Priority</option>
+                    <option value="high">🔴 High Priority</option>
+                </select>
+
+                <label for="editTaskNotes" style="margin-top: 15px;">Notes (optional)</label>
+                <textarea id="editTaskNotes" class="modal-textarea" placeholder="Add any notes..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancelTaskEditBtn">Cancel</button>
+                <button class="modal-btn save-btn" id="saveTaskEditBtn">Save Changes</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
