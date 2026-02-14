@@ -3,106 +3,18 @@
 // ==================== 
 
 const hinduQuotes = [
-    {
-        text: "You have the right to work, but never to the fruit of work.",
-        source: "Bhagavad Gita 2.47",
-        sanskrit: "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।"
-    },
-    {
-        text: "The mind is restless and difficult to restrain, but it is subdued by practice.",
-        source: "Bhagavad Gita 6.35",
-        sanskrit: "असंशयं महाबाहो मनो दुर्निग्रहं चलम्।"
-    },
-    {
-        text: "When meditation is mastered, the mind is unwavering like a flame in a windless place.",
-        source: "Bhagavad Gita 6.19",
-        sanskrit: "यथा दीपो निवातस्थो नेङ्गते सोपमा स्मृता।"
-    },
-    {
-        text: "A person can rise through the efforts of their own mind.",
-        source: "Bhagavad Gita 6.5",
-        sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।"
-    },
-    {
-        text: "Whatever happened, happened for the good. Whatever is happening, is happening for the good.",
-        source: "Bhagavad Gita",
-        sanskrit: "जो हुआ वह अच्छे के लिए हुआ।"
-    },
-    {
-        text: "Arise, awake, and stop not until the goal is achieved.",
-        source: "Katha Upanishad",
-        sanskrit: "उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत।"
-    },
-    {
-        text: "Truth alone triumphs, not falsehood.",
-        source: "Mundaka Upanishad 3.1.6",
-        sanskrit: "सत्यमेव जयते नानृतं।"
-    },
-    {
-        text: "From the unreal lead me to the real, from darkness lead me to light.",
-        source: "Brihadaranyaka Upanishad",
-        sanskrit: "असतो मा सद्गमय। तमसो मा ज्योतिर्गमय।"
-    },
-    {
-        text: "May all beings be happy. May all beings be healthy.",
-        source: "Upanishads",
-        sanskrit: "सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः।"
-    },
-    {
-        text: "Let noble thoughts come to us from all directions.",
-        source: "Rig Veda 1.89.1",
-        sanskrit: "आ नो भद्राः क्रतवो यन्तु विश्वतः।"
-    },
-    {
-        text: "Dharma protects those who protect Dharma.",
-        source: "Mahabharata",
-        sanskrit: "धर्मो रक्षति रक्षितः।"
-    },
-    {
-        text: "The one who has conquered the mind has already won the world.",
-        source: "Bhagavad Gita 6.7",
-        sanskrit: "जितात्मनः प्रशान्तस्य परमात्मा समाहितः।"
-    },
-    {
-        text: "Perform your duty with a calm mind, without attachment to success or failure.",
-        source: "Bhagavad Gita 2.48",
-        sanskrit: "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।"
-    },
-    {
-        text: "He who sees inaction in action and action in inaction is wise.",
-        source: "Bhagavad Gita 4.18",
-        sanskrit: "कर्मण्यकर्म यः पश्येदकर्मणि च कर्म यः।"
-    },
-    {
-        text: "There is nothing lost or wasted in this life.",
-        source: "Bhagavad Gita 2.40",
-        sanskrit: "नेहाभिक्रमनाशोऽस्ति प्रत्यवायो न विद्यते।"
-    },
-    {
-        text: "Even as a tortoise draws in its limbs, the wise can draw in their senses at will.",
-        source: "Bhagavad Gita 2.58",
-        sanskrit: "यदा संहरते चायं कूर्मोऽङ्गानीव सर्वशः।"
-    },
-    {
-        text: "The soul is neither born, nor does it ever die.",
-        source: "Bhagavad Gita 2.20",
-        sanskrit: "न जायते म्रियते वा कदाचिन्।"
-    },
-    {
-        text: "Hell has three gates: lust, anger, and greed.",
-        source: "Bhagavad Gita 16.21",
-        sanskrit: "त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः।"
-    },
-    {
-        text: "Change is the law of the universe.",
-        source: "Bhagavad Gita",
-        sanskrit: "परिवर्तनं संसारस्य नियमः।"
-    },
-    {
-        text: "Fear not what is not real. What is real, always was and cannot be destroyed.",
-        source: "Bhagavad Gita 2.16",
-        sanskrit: "नासतो विद्यते भावो नाभावो विद्यते सतः।"
-    }
+    { text: "You have the right to work, but never to the fruit of work.", source: "Bhagavad Gita 2.47", sanskrit: "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।" },
+    { text: "The mind is restless and difficult to restrain, but it is subdued by practice.", source: "Bhagavad Gita 6.35", sanskrit: "असंशयं महाबाहो मनो दुर्निग्रहं चलम्।" },
+    { text: "When meditation is mastered, the mind is unwavering like a flame in a windless place.", source: "Bhagavad Gita 6.19", sanskrit: "यथा दीपो निवातस्थो नेङ्गते सोपमा स्मृता।" },
+    { text: "A person can rise through the efforts of their own mind.", source: "Bhagavad Gita 6.5", sanskrit: "उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।" },
+    { text: "Whatever happened, happened for the good.", source: "Bhagavad Gita", sanskrit: "जो हुआ वह अच्छे के लिए हुआ।" },
+    { text: "Arise, awake, and stop not until the goal is achieved.", source: "Katha Upanishad", sanskrit: "उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत।" },
+    { text: "Truth alone triumphs, not falsehood.", source: "Mundaka Upanishad", sanskrit: "सत्यमेव जयते नानृतं।" },
+    { text: "From the unreal lead me to the real, from darkness lead me to light.", source: "Brihadaranyaka Upanishad", sanskrit: "असतो मा सद्गमय। तमसो मा ज्योतिर्गमय।" },
+    { text: "May all beings be happy. May all beings be healthy.", source: "Upanishads", sanskrit: "सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः।" },
+    { text: "Let noble thoughts come to us from all directions.", source: "Rig Veda", sanskrit: "आ नो भद्राः क्रतवो यन्तु विश्वतः।" },
+    { text: "Dharma protects those who protect Dharma.", source: "Mahabharata", sanskrit: "धर्मो रक्षति रक्षितः।" },
+    { text: "The one who has conquered the mind has already won the world.", source: "Bhagavad Gita 6.7", sanskrit: "जितात्मनः प्रशान्तस्य परमात्मा समाहितः।" }
 ];
 
 // ==================== 
@@ -154,15 +66,53 @@ const clearReflectionBtn = document.getElementById('clearReflectionBtn');
 const historyList = document.getElementById('historyList');
 const toggleHistoryBtn = document.getElementById('toggleHistoryBtn');
 
+// Habit Modal Elements
+const editHabitModal = document.getElementById('editHabitModal');
+const editHabitInput = document.getElementById('editHabitInput');
+const closeHabitModalBtn = document.getElementById('closeHabitModalBtn');
+const cancelHabitEditBtn = document.getElementById('cancelHabitEditBtn');
+const saveHabitEditBtn = document.getElementById('saveHabitEditBtn');
+const habitCreatedDate = document.getElementById('habitCreatedDate');
+const habitCurrentStreak = document.getElementById('habitCurrentStreak');
+const habitTotalCompletions = document.getElementById('habitTotalCompletions');
+
+// To-Do Elements
+const addTaskForm = document.getElementById('addTaskForm');
+const taskInput = document.getElementById('taskInput');
+const taskPriority = document.getElementById('taskPriority');
+const taskList = document.getElementById('taskList');
+const todoPrevDateBtn = document.getElementById('todoPrevDateBtn');
+const todoNextDateBtn = document.getElementById('todoNextDateBtn');
+const todoDateLabel = document.getElementById('todoDateLabel');
+const todoDateFull = document.getElementById('todoDateFull');
+const taskProgressText = document.getElementById('taskProgressText');
+const taskProgressPercent = document.getElementById('taskProgressPercent');
+const taskProgressFill = document.getElementById('taskProgressFill');
+const clearCompletedBtn = document.getElementById('clearCompletedBtn');
+
+// Task Modal Elements
+const editTaskModal = document.getElementById('editTaskModal');
+const editTaskInput = document.getElementById('editTaskInput');
+const editTaskPriority = document.getElementById('editTaskPriority');
+const editTaskNotes = document.getElementById('editTaskNotes');
+const closeTaskModalBtn = document.getElementById('closeTaskModalBtn');
+const cancelTaskEditBtn = document.getElementById('cancelTaskEditBtn');
+const saveTaskEditBtn = document.getElementById('saveTaskEditBtn');
+
 // ==================== 
 // DATA & STATE
 // ==================== 
 
 let habits = JSON.parse(localStorage.getItem('habits')) || [];
 let reflections = JSON.parse(localStorage.getItem('reflections')) || {};
+let tasks = JSON.parse(localStorage.getItem('tasks')) || {};
 let currentReflectionDate = new Date();
+let currentTodoDate = new Date();
 let saveTimeout = null;
 let historyExpanded = false;
+let editingHabitIndex = null;
+let editingTaskId = null;
+let currentTaskFilter = 'all';
 
 // ==================== 
 // UTILITY FUNCTIONS
@@ -198,18 +148,25 @@ function formatDateLabel(date) {
     const today = new Date();
     const yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
     
     if (formatDateKey(date) === formatDateKey(today)) return 'Today';
     if (formatDateKey(date) === formatDateKey(yesterday)) return 'Yesterday';
+    if (formatDateKey(date) === formatDateKey(tomorrow)) return 'Tomorrow';
     return date.toLocaleDateString('en-US', { weekday: 'long' });
 }
 
 function formatDateFull(date) {
-    return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
 function countWords(text) {
     return text.trim() ? text.trim().split(/\s+/).length : 0;
+}
+
+function generateId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }
 
 // ==================== 
@@ -224,7 +181,9 @@ function renderDaysHeader() {
         if (day.isToday) span.classList.add('today');
         daysHeader.appendChild(span);
     });
-    daysHeader.appendChild(document.createElement('span'));
+    const actionsSpan = document.createElement('span');
+    actionsSpan.textContent = 'Actions';
+    daysHeader.appendChild(actionsSpan);
 }
 
 function calculateStreak(habit) {
@@ -267,13 +226,16 @@ function createHabitHTML(habit, index) {
 
     return `
         <div class="habit-item">
-            <div class="habit-info">
+            <div class="habit-info" data-index="${index}" title="Click to edit">
                 <h3>${escapeHTML(habit.name)}</h3>
-                <div class="streak">${streak > 0 ? `<span class="fire">🔥</span> ${streak} day streak` : 'Start your streak today!'}</div>
-                <div class="habit-weekly-progress">${weeklyProgress.completed}/7 this week (${weeklyProgress.percentage}%)</div>
+                <div class="streak">${streak > 0 ? `<span class="fire">🔥</span> ${streak} day streak` : 'Start your streak!'}</div>
+                <div class="habit-weekly-progress">${weeklyProgress.completed}/7 this week</div>
             </div>
             ${checksHTML}
-            <button class="delete-btn" data-index="${index}" title="Delete">×</button>
+            <div class="habit-actions">
+                <button class="edit-btn" data-index="${index}" title="Edit">✏️</button>
+                <button class="delete-btn" data-index="${index}" title="Delete">🗑️</button>
+            </div>
             <div class="habit-progress-bar" style="width: calc((100% - 30px) * ${weeklyProgress.percentage / 100})"></div>
         </div>
     `;
@@ -285,7 +247,7 @@ function renderHabits() {
             <div class="empty-state">
                 <div class="icon">📝</div>
                 <h3>No habits yet</h3>
-                <p>Add your first habit above to get started!</p>
+                <p>Add your first habit above!</p>
             </div>
         `;
         updateProgress();
@@ -298,8 +260,24 @@ function renderHabits() {
         check.addEventListener('click', toggleHabit);
     });
 
-    document.querySelectorAll('.delete-btn').forEach(btn => {
-        btn.addEventListener('click', deleteHabit);
+    document.querySelectorAll('.habit-item .edit-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openHabitEditModal(parseInt(btn.dataset.index));
+        });
+    });
+
+    document.querySelectorAll('.habit-item .delete-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            deleteHabit(parseInt(btn.dataset.index));
+        });
+    });
+
+    document.querySelectorAll('.habit-info').forEach(info => {
+        info.addEventListener('click', () => {
+            openHabitEditModal(parseInt(info.dataset.index));
+        });
     });
 
     updateProgress();
@@ -325,7 +303,6 @@ function addHabit(e) {
     const name = habitInput.value.trim();
 
     if (name) {
-        // Check for duplicates
         const exists = habits.some(h => h.name.toLowerCase() === name.toLowerCase());
         if (exists) {
             alert('This habit already exists!');
@@ -333,7 +310,7 @@ function addHabit(e) {
         }
 
         habits.push({
-            id: Date.now(),
+            id: generateId(),
             name: name,
             completedDates: [],
             createdAt: new Date().toISOString()
@@ -342,7 +319,6 @@ function addHabit(e) {
         saveHabits();
         renderHabits();
         habitInput.value = '';
-        habitInput.focus();
     }
 }
 
@@ -354,7 +330,7 @@ function addQuickHabit(habitName) {
     }
 
     habits.push({
-        id: Date.now(),
+        id: generateId(),
         name: habitName,
         completedDates: [],
         createdAt: new Date().toISOString()
@@ -364,11 +340,8 @@ function addQuickHabit(habitName) {
     renderHabits();
 }
 
-function deleteHabit(e) {
-    const index = parseInt(e.target.dataset.index);
-    const habitName = habits[index].name;
-
-    if (confirm(`Delete "${habitName}"?`)) {
+function deleteHabit(index) {
+    if (confirm(`Delete "${habits[index].name}"?`)) {
         habits.splice(index, 1);
         saveHabits();
         renderHabits();
@@ -379,11 +352,270 @@ function saveHabits() {
     localStorage.setItem('habits', JSON.stringify(habits));
 }
 
+// Habit Modal
+function openHabitEditModal(index) {
+    editingHabitIndex = index;
+    const habit = habits[index];
+    
+    editHabitInput.value = habit.name;
+    habitCreatedDate.textContent = new Date(habit.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    
+    const streak = calculateStreak(habit);
+    habitCurrentStreak.innerHTML = streak > 0 ? `🔥 ${streak} days` : '0 days';
+    habitTotalCompletions.textContent = habit.completedDates.length;
+    
+    editHabitModal.classList.add('active');
+    editHabitInput.focus();
+    editHabitInput.select();
+}
+
+function closeHabitEditModal() {
+    editHabitModal.classList.remove('active');
+    editingHabitIndex = null;
+}
+
+function saveHabitEdit() {
+    if (editingHabitIndex === null) return;
+    
+    const newName = editHabitInput.value.trim();
+    if (!newName) {
+        alert('Please enter a habit name.');
+        return;
+    }
+    
+    const exists = habits.some((h, i) => i !== editingHabitIndex && h.name.toLowerCase() === newName.toLowerCase());
+    if (exists) {
+        alert('A habit with this name already exists!');
+        return;
+    }
+    
+    habits[editingHabitIndex].name = newName;
+    saveHabits();
+    renderHabits();
+    closeHabitEditModal();
+}
+
+// ==================== 
+// TO-DO FUNCTIONS
+// ==================== 
+
+function getTasksForDate(date) {
+    const key = formatDateKey(date);
+    return tasks[key] || [];
+}
+
+function saveTasksForDate(date, taskList) {
+    const key = formatDateKey(date);
+    if (taskList.length === 0) {
+        delete tasks[key];
+    } else {
+        tasks[key] = taskList;
+    }
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function renderTasks() {
+    const currentTasks = getTasksForDate(currentTodoDate);
+    
+    // Filter tasks
+    let filteredTasks = currentTasks;
+    if (currentTaskFilter === 'active') {
+        filteredTasks = currentTasks.filter(t => !t.completed);
+    } else if (currentTaskFilter === 'completed') {
+        filteredTasks = currentTasks.filter(t => t.completed);
+    }
+    
+    // Sort by priority only - completed tasks stay in place
+    filteredTasks.sort((a, b) => {
+        const priorityOrder = { high: 0, medium: 1, low: 2 };
+        return priorityOrder[a.priority] - priorityOrder[b.priority];
+    });
+    
+    if (filteredTasks.length === 0) {
+        const message = currentTaskFilter === 'all' ? 'No tasks for this day' : `No ${currentTaskFilter} tasks`;
+        taskList.innerHTML = `
+            <div class="empty-tasks">
+                <div class="icon">✅</div>
+                <p>${message}</p>
+            </div>
+        `;
+    } else {
+        taskList.innerHTML = filteredTasks.map(task => createTaskHTML(task)).join('');
+        
+        // Add event listeners
+        document.querySelectorAll('.task-checkbox').forEach(cb => {
+            cb.addEventListener('click', () => toggleTask(cb.dataset.id));
+        });
+        
+        document.querySelectorAll('.task-edit-btn').forEach(btn => {
+            btn.addEventListener('click', () => openTaskEditModal(btn.dataset.id));
+        });
+        
+        document.querySelectorAll('.task-delete-btn').forEach(btn => {
+            btn.addEventListener('click', () => deleteTask(btn.dataset.id));
+        });
+    }
+    
+    updateTaskProgress();
+    updateTodoDateDisplay();
+}
+
+function createTaskHTML(task) {
+    return `
+        <div class="task-item ${task.completed ? 'completed' : ''}">
+            <div class="task-checkbox ${task.completed ? 'checked' : ''}" data-id="${task.id}"></div>
+            <div class="task-content">
+                <div class="task-text">${escapeHTML(task.text)}</div>
+                <div class="task-meta">
+                    <span class="task-priority ${task.priority}">${task.priority}</span>
+                    ${task.notes ? '<span class="task-notes-indicator">📝 Note</span>' : ''}
+                </div>
+            </div>
+            <div class="task-actions">
+                <button class="task-edit-btn" data-id="${task.id}" title="Edit">✏️</button>
+                <button class="task-delete-btn" data-id="${task.id}" title="Delete">🗑️</button>
+            </div>
+        </div>
+    `;
+}
+
+function addTask(e) {
+    e.preventDefault();
+    const text = taskInput.value.trim();
+    
+    if (text) {
+        const currentTasks = getTasksForDate(currentTodoDate);
+        currentTasks.push({
+            id: generateId(),
+            text: text,
+            priority: taskPriority.value,
+            completed: false,
+            notes: '',
+            createdAt: new Date().toISOString()
+        });
+        
+        saveTasksForDate(currentTodoDate, currentTasks);
+        renderTasks();
+        taskInput.value = '';
+        taskPriority.value = 'medium';
+    }
+}
+
+function toggleTask(taskId) {
+    const currentTasks = getTasksForDate(currentTodoDate);
+    const task = currentTasks.find(t => t.id === taskId);
+    if (task) {
+        task.completed = !task.completed;
+        saveTasksForDate(currentTodoDate, currentTasks);
+        renderTasks();
+    }
+}
+
+function deleteTask(taskId) {
+    const currentTasks = getTasksForDate(currentTodoDate);
+    const index = currentTasks.findIndex(t => t.id === taskId);
+    if (index > -1) {
+        currentTasks.splice(index, 1);
+        saveTasksForDate(currentTodoDate, currentTasks);
+        renderTasks();
+    }
+}
+
+function clearCompletedTasks() {
+    const currentTasks = getTasksForDate(currentTodoDate);
+    const activeTasks = currentTasks.filter(t => !t.completed);
+    const completedCount = currentTasks.length - activeTasks.length;
+    
+    if (completedCount === 0) {
+        alert('No completed tasks to clear!');
+        return;
+    }
+    
+    if (confirm(`Clear ${completedCount} completed task(s)?`)) {
+        saveTasksForDate(currentTodoDate, activeTasks);
+        renderTasks();
+    }
+}
+
+function updateTaskProgress() {
+    const currentTasks = getTasksForDate(currentTodoDate);
+    const total = currentTasks.length;
+    const completed = currentTasks.filter(t => t.completed).length;
+    const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+    
+    taskProgressText.textContent = `${completed} of ${total} tasks completed`;
+    taskProgressPercent.textContent = `${percent}%`;
+    taskProgressFill.style.width = `${percent}%`;
+}
+
+function updateTodoDateDisplay() {
+    todoDateLabel.textContent = formatDateLabel(currentTodoDate);
+    todoDateFull.textContent = formatDateFull(currentTodoDate);
+}
+
+function navigateTodoDate(direction) {
+    currentTodoDate.setDate(currentTodoDate.getDate() + direction);
+    renderTasks();
+}
+
+// Task Modal
+function openTaskEditModal(taskId) {
+    const currentTasks = getTasksForDate(currentTodoDate);
+    const task = currentTasks.find(t => t.id === taskId);
+    
+    if (task) {
+        editingTaskId = taskId;
+        editTaskInput.value = task.text;
+        editTaskPriority.value = task.priority;
+        editTaskNotes.value = task.notes || '';
+        
+        editTaskModal.classList.add('active');
+        editTaskInput.focus();
+        editTaskInput.select();
+    }
+}
+
+function closeTaskEditModal() {
+    editTaskModal.classList.remove('active');
+    editingTaskId = null;
+}
+
+function saveTaskEdit() {
+    if (!editingTaskId) return;
+    
+    const newText = editTaskInput.value.trim();
+    if (!newText) {
+        alert('Please enter a task.');
+        return;
+    }
+    
+    const currentTasks = getTasksForDate(currentTodoDate);
+    const task = currentTasks.find(t => t.id === editingTaskId);
+    
+    if (task) {
+        task.text = newText;
+        task.priority = editTaskPriority.value;
+        task.notes = editTaskNotes.value.trim();
+        
+        saveTasksForDate(currentTodoDate, currentTasks);
+        renderTasks();
+        closeTaskEditModal();
+    }
+}
+
+function setTaskFilter(filter) {
+    currentTaskFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+    renderTasks();
+}
+
 // ==================== 
 // PROGRESS FUNCTIONS
 // ==================== 
 
-function setProgress(ring, percentage, radius = 42) {
+function setProgress(ring, percentage, radius = 38) {
     const circumference = 2 * Math.PI * radius;
     const offset = circumference - (percentage / 100) * circumference;
     ring.style.strokeDasharray = circumference;
@@ -394,7 +626,6 @@ function updateProgress() {
     const today = new Date().toISOString().split('T')[0];
     const totalHabits = habits.length;
 
-    // Today's Progress
     const completedTodayCount = habits.filter(h => h.completedDates.includes(today)).length;
     const todayPercent = totalHabits > 0 ? Math.round((completedTodayCount / totalHabits) * 100) : 0;
     setProgress(todayProgressRing, todayPercent);
@@ -402,7 +633,6 @@ function updateProgress() {
     todayCompleted.textContent = completedTodayCount;
     todayTotal.textContent = totalHabits;
 
-    // Weekly Progress
     let weeklyCompletedCount = 0;
     habits.forEach(habit => {
         days.forEach(day => {
@@ -416,12 +646,10 @@ function updateProgress() {
     weeklyCompleted.textContent = weeklyCompletedCount;
     weeklyTotal.textContent = weeklyTotalCount;
 
-    // Best Streak
     const bestStreak = habits.reduce((max, habit) => Math.max(max, calculateStreak(habit)), 0);
     setProgress(streakProgressRing, Math.min((bestStreak / 30) * 100, 100));
     streakDays.textContent = bestStreak;
 
-    // Overall Progress Bar
     overallProgressFill.style.width = `${weeklyPercent}%`;
     overallPercentageText.textContent = `${weeklyPercent}%`;
 }
@@ -435,17 +663,17 @@ function loadReflection(date) {
     const reflection = reflections[key];
     reflectionTextarea.value = reflection ? reflection.text : '';
     updateTextStats();
-    updateDateDisplay();
-    updateNavigationButtons();
+    updateReflectionDateDisplay();
+    updateReflectionNavButtons();
     renderReflectionHistory();
 }
 
-function updateDateDisplay() {
+function updateReflectionDateDisplay() {
     reflectionDateLabel.textContent = formatDateLabel(currentReflectionDate);
     reflectionDateFull.textContent = formatDateFull(currentReflectionDate);
 }
 
-function updateNavigationButtons() {
+function updateReflectionNavButtons() {
     const today = new Date();
     nextDateBtn.disabled = formatDateKey(currentReflectionDate) === formatDateKey(today);
 }
@@ -501,20 +729,13 @@ function updateTextStats() {
 function handleReflectionInput() {
     updateTextStats();
     showSaveStatus('saving');
-
     if (saveTimeout) clearTimeout(saveTimeout);
     saveTimeout = setTimeout(saveReflection, 1000);
 }
 
-function navigateDate(direction) {
-    const newDate = new Date(currentReflectionDate);
-    newDate.setDate(newDate.getDate() + direction);
-
-    const today = new Date();
-    if (newDate <= today) {
-        currentReflectionDate = newDate;
-        loadReflection(currentReflectionDate);
-    }
+function navigateReflectionDate(direction) {
+    currentReflectionDate.setDate(currentReflectionDate.getDate() + direction);
+    loadReflection(currentReflectionDate);
 }
 
 function clearReflection() {
@@ -529,26 +750,20 @@ function insertPrompt(prompt) {
     const newText = currentText ? `${currentText}\n\n${prompt}\n` : `${prompt}\n`;
     reflectionTextarea.value = newText;
     reflectionTextarea.focus();
-    reflectionTextarea.setSelectionRange(newText.length, newText.length);
     handleReflectionInput();
 }
 
 function renderReflectionHistory() {
     const sortedDates = Object.keys(reflections).sort((a, b) => new Date(b) - new Date(a));
-    const displayDates = historyExpanded ? sortedDates : sortedDates.slice(0, 5);
+    const displayDates = historyExpanded ? sortedDates : sortedDates.slice(0, 3);
 
     if (sortedDates.length === 0) {
-        historyList.innerHTML = `
-            <div class="empty-history">
-                <div class="icon">📖</div>
-                <p>No reflections yet. Start writing today!</p>
-            </div>
-        `;
+        historyList.innerHTML = `<div class="empty-history"><div class="icon">📖</div><p>No reflections yet</p></div>`;
         toggleHistoryBtn.style.display = 'none';
         return;
     }
 
-    toggleHistoryBtn.style.display = sortedDates.length > 5 ? 'block' : 'none';
+    toggleHistoryBtn.style.display = sortedDates.length > 3 ? 'block' : 'none';
     toggleHistoryBtn.textContent = historyExpanded ? 'Show Less' : 'Show All';
 
     historyList.innerHTML = displayDates.map(dateKey => {
@@ -603,17 +818,8 @@ function updateClock() {
     minuteHand.style.transform = `rotate(${minuteRotation}deg)`;
     hourHand.style.transform = `rotate(${hourRotation}deg)`;
 
-    const formattedHours = hours.toString().padStart(2, '0');
-    const formattedMinutes = minutes.toString().padStart(2, '0');
-    const formattedSeconds = seconds.toString().padStart(2, '0');
-    digitalTime.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
-
-    dateDisplay.textContent = now.toLocaleDateString('en-US', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
+    digitalTime.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    dateDisplay.textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 function startClock() {
@@ -651,6 +857,7 @@ function displayDailyQuote() {
 function init() {
     renderDaysHeader();
     renderHabits();
+    renderTasks();
     startClock();
     displayDailyQuote();
     loadReflection(currentReflectionDate);
@@ -660,32 +867,50 @@ function init() {
 // EVENT LISTENERS
 // ==================== 
 
-// Habit form
+// Habits
 addHabitForm.addEventListener('submit', addHabit);
-
-// Quick add buttons
 document.querySelectorAll('.quick-add-btn').forEach(btn => {
     btn.addEventListener('click', () => addQuickHabit(btn.dataset.habit));
 });
 
+// Habit Modal
+closeHabitModalBtn.addEventListener('click', closeHabitEditModal);
+cancelHabitEditBtn.addEventListener('click', closeHabitEditModal);
+saveHabitEditBtn.addEventListener('click', saveHabitEdit);
+editHabitModal.addEventListener('click', (e) => { if (e.target === editHabitModal) closeHabitEditModal(); });
+editHabitInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); saveHabitEdit(); }
+    if (e.key === 'Escape') closeHabitEditModal();
+});
+
+// Tasks
+addTaskForm.addEventListener('submit', addTask);
+todoPrevDateBtn.addEventListener('click', () => navigateTodoDate(-1));
+todoNextDateBtn.addEventListener('click', () => navigateTodoDate(1));
+clearCompletedBtn.addEventListener('click', clearCompletedTasks);
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => setTaskFilter(btn.dataset.filter));
+});
+
+// Task Modal
+closeTaskModalBtn.addEventListener('click', closeTaskEditModal);
+cancelTaskEditBtn.addEventListener('click', closeTaskEditModal);
+saveTaskEditBtn.addEventListener('click', saveTaskEdit);
+editTaskModal.addEventListener('click', (e) => { if (e.target === editTaskModal) closeTaskEditModal(); });
+editTaskInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); saveTaskEdit(); }
+    if (e.key === 'Escape') closeTaskEditModal();
+});
+
 // Reflection
 reflectionTextarea.addEventListener('input', handleReflectionInput);
-prevDateBtn.addEventListener('click', () => navigateDate(-1));
-nextDateBtn.addEventListener('click', () => navigateDate(1));
+prevDateBtn.addEventListener('click', () => navigateReflectionDate(-1));
+nextDateBtn.addEventListener('click', () => navigateReflectionDate(1));
 clearReflectionBtn.addEventListener('click', clearReflection);
 toggleHistoryBtn.addEventListener('click', toggleHistory);
-
-// Prompts
 document.querySelectorAll('.prompt-btn').forEach(btn => {
     btn.addEventListener('click', () => insertPrompt(btn.dataset.prompt));
 });
 
-// Keyboard navigation for reflection dates
-document.addEventListener('keydown', (e) => {
-    if (e.target === reflectionTextarea) return;
-    if (e.key === 'ArrowLeft') navigateDate(-1);
-    if (e.key === 'ArrowRight') navigateDate(1);
-});
-
-// Start the app
+// Start
 init();
